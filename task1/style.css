@@ -10,8 +10,13 @@ header {
 }
 
 main {
-  width: 960px;
+  width: 100%;
   margin: 50px auto;
+  display: flex;
+}
+.box-container {
+  width: 100%;
+  margin: 0 auto;
   display: flex;
 }
 
@@ -76,6 +81,7 @@ footer {
   }
 
   .box-container {
+    display: block;
     width: 90%;
     margin: 20px 0;
     align-items: center;
@@ -84,7 +90,7 @@ footer {
   .step-box {
     width: 100%;
     margin-right: 0;
-    padding: 10px;
+    margin: 20px 0;
   }
 
   header,
