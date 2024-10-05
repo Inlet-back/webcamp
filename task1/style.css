@@ -17,7 +17,6 @@ main {
 .box-container {
   margin: 0 auto;
   display: flex;
-  flex-wrap: wrap;
 }
 
 .step-box {
