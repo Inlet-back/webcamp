@@ -9,11 +9,13 @@ class BooksController < ApplicationController
       flash[:notice] = "投稿に成功しました。"
       redirect_to book_path(@book.id)
     else
-      flash.now[:alert] = "投稿に失敗しました。"
-      render :new
+      flash[:alert] = "投稿に失敗しました。"
+      redirect_to books_path
     end
+  end
 
   def index
+    @book = Book.new
     @books = Book.all
   end
 
@@ -34,8 +36,9 @@ class BooksController < ApplicationController
       flash.now[:alert] = "更新に失敗しました。"
       render :edit
     end
-    
   end
+    
+  
   def destroy
     @book = Book.find(params[:id])
    if @book.destroy
@@ -45,5 +48,10 @@ class BooksController < ApplicationController
       flash.now[:alert] = "削除に失敗しました。"
       render :index
     end
+  end
+
+  private
+  def book_params
+    params.require(:book).permit(:title, :body)
   end
 end

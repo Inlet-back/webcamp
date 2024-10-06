@@ -4,3 +4,6 @@
 
 **/tmp
 **/cache
+**/log
+**/logs
+**/storage/*
