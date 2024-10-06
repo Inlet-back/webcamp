@@ -1,4 +1,6 @@
 class BooksController < ApplicationController
+
+
   def new
     @book = Book.new
   end
@@ -11,7 +13,7 @@ class BooksController < ApplicationController
     else
       flash.now[:alert] = "投稿に失敗しました。"
       @books = Book.all
-      render :index
+      render :index,status: :unprocessable_entity
     end
   end
 
