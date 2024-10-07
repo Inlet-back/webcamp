@@ -1956,3 +1956,130 @@ Processing by BooksController#show as TURBO_STREAM
 Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.0ms | Allocations: 2574)
 
 
+Started GET "/books/6" for ::1 at 2024-10-07 16:15:53 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:26:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1972)
+  Rendered layout layouts/application.html.erb (Duration: 47.5ms | Allocations: 26691)
+Completed 500 Internal Server Error in 68ms (ActiveRecord: 1.4ms | Allocations: 45551)
+
+
+  
+ActionView::Template::Error (undefined method `javascript_pack_tag' for #<ActionView::Base:0x0000000000b360>
+
+    '.freeze; @output_buffer.append=( javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' ); @output_buffer.safe_append='
+                                      ^^^^^^^^^^^^^^^^^^^
+Did you mean?  javascript_path
+               javascript_tag):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:   </head>
+    12:   </head>
+    13: 
+  
+app/views/layouts/application.html.erb:10
+Started GET "/" for 127.0.0.1 at 2024-10-07 16:24:51 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 0.3ms | Allocations: 393)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: 24ba5b8a8c1cd872e438
+Version: webpack 4.47.0
+Time: 344ms
+Built at: 2024/10/07 16:24:52
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-1443ed2a481086321566.js   8.47 KiB  application  [emitted] [immutable]  application
+js/application-1443ed2a481086321566.js.map   3.53 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-1443ed2a481086321566.js js/application-1443ed2a481086321566.js.map
+[./app/javascript/packs/application.js] 4.57 KiB {application} [built] [failed] [1 error]
+
+ERROR in ./app/javascript/packs/application.js
+Module build failed (from /Users/uramasachika/node_modules/babel-loader/lib/index.js):
+Error: Cannot find package '@babel/plugin-proposal-private-methods' imported from /Users/uramasachika/webcamp/bookers/babel-virtual-resolve-base.js
+    at __node_internal_ (/Users/uramasachika/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:225:9)
+    at new NodeError (/Users/uramasachika/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:195:5)
+    at packageResolve (/Users/uramasachika/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:899:9)
+    at moduleResolve (/Users/uramasachika/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:939:18)
+    at defaultResolve (/Users/uramasachika/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:1017:15)
+    at resolve (/Users/uramasachika/node_modules/@babel/core/lib/vendor/import-meta-resolve.js:1030:12)
+    at tryImportMetaResolve (/Users/uramasachika/node_modules/@babel/core/lib/config/files/plugins.js:148:45)
+    at resolveStandardizedNameForImport (/Users/uramasachika/node_modules/@babel/core/lib/config/files/plugins.js:173:19)
+    at resolveStandardizedName (/Users/uramasachika/node_modules/@babel/core/lib/config/files/plugins.js:185:22)
+    at loadPlugin (/Users/uramasachika/node_modules/@babel/core/lib/config/files/plugins.js:55:7)
+    at loadPlugin.next (<anonymous>)
+    at createDescriptor (/Users/uramasachika/node_modules/@babel/core/lib/config/config-descriptors.js:140:16)
+    at createDescriptor.next (<anonymous>)
+    at step (/Users/uramasachika/node_modules/gensync/index.js:261:32)
+    at evaluateAsync (/Users/uramasachika/node_modules/gensync/index.js:291:5)
+    at /Users/uramasachika/node_modules/gensync/index.js:44:11
+    at Array.forEach (<anonymous>)
+    at Function.async (/Users/uramasachika/node_modules/gensync/index.js:43:15)
+    at Function.all (/Users/uramasachika/node_modules/gensync/index.js:216:13)
+    at Generator.next (<anonymous>)
+    at createDescriptors (/Users/uramasachika/node_modules/@babel/core/lib/config/config-descriptors.js:102:41)
+    at createDescriptors.next (<anonymous>)
+    at createPluginDescriptors (/Users/uramasachika/node_modules/@babel/core/lib/config/config-descriptors.js:99:17)
+    at createPluginDescriptors.next (<anonymous>)
+    at /Users/uramasachika/node_modules/@babel/core/lib/gensync-utils/functional.js:39:27
+    at Generator.next (<anonymous>)
+    at mergeChainOpts (/Users/uramasachika/node_modules/@babel/core/lib/config/config-chain.js:349:34)
+    at mergeChainOpts.next (<anonymous>)
+    at chainWalker (/Users/uramasachika/node_modules/@babel/core/lib/config/config-chain.js:316:14)
+    at chainWalker.next (<anonymous>)
+    at loadFileChain (/Users/uramasachika/node_modules/@babel/core/lib/config/config-chain.js:191:24)
+    at loadFileChain.next (<anonymous>)
+    at buildRootChain (/Users/uramasachika/node_modules/@babel/core/lib/config/config-chain.js:77:27)
+    at buildRootChain.next (<anonymous>)
+    at loadPrivatePartialConfig (/Users/uramasachika/node_modules/@babel/core/lib/config/partial.js:72:62)
+    at loadPrivatePartialConfig.next (<anonymous>)
+    at loadPartialConfig (/Users/uramasachika/node_modules/@babel/core/lib/config/partial.js:115:25)
+    at loadPartialConfig.next (<anonymous>)
+    at step (/Users/uramasachika/node_modules/gensync/index.js:269:25)
+    at evaluateAsync (/Users/uramasachika/node_modules/gensync/index.js:291:5)
+    at /Users/uramasachika/node_modules/gensync/index.js:93:9
+    at new Promise (<anonymous>)
+    at async (/Users/uramasachika/node_modules/gensync/index.js:92:14)
+    at stopHiding - secret - don't use this - v1 (/Users/uramasachika/node_modules/@babel/core/lib/errors/rewrite-stack-trace.js:47:12)
+    at loadPartialConfigAsync (/Users/uramasachika/node_modules/@babel/core/lib/config/index.js:34:85)
+    at Object.<anonymous> (/Users/uramasachika/node_modules/babel-loader/lib/index.js:133:26)
+    at Generator.next (<anonymous>)
+    at asyncGeneratorStep (/Users/uramasachika/node_modules/babel-loader/lib/index.js:3:103)
+    at _next (/Users/uramasachika/node_modules/babel-loader/lib/index.js:4:194)
+    at /Users/uramasachika/node_modules/babel-loader/lib/index.js:4:364
+    at new Promise (<anonymous>)
+    at Object.<anonymous> (/Users/uramasachika/node_modules/babel-loader/lib/index.js:4:97)
+    at Object._loader (/Users/uramasachika/node_modules/babel-loader/lib/index.js:231:18)
+    at Object.loader (/Users/uramasachika/node_modules/babel-loader/lib/index.js:48:18)
+    at Object.<anonymous> (/Users/uramasachika/node_modules/babel-loader/lib/index.js:44:12)
+
+
+warning package.json: No license field
+
+  Rendered layout layouts/application.html.erb (Duration: 1116.9ms | Allocations: 30601)
+Completed 200 OK in 1125ms (Views: 1119.8ms | ActiveRecord: 0.0ms | Allocations: 34912)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-10-07 16:24:57 +0900
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:12
+Book object exists: false
+  Rendered books/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 3967)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 7105)
+Completed 200 OK in 24ms (Views: 8.0ms | ActiveRecord: 1.2ms | Allocations: 19677)
+
+
