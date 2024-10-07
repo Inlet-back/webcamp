@@ -8,10 +8,10 @@ class BooksController < ApplicationController
   def create
     @book = Book.new(book_params)
     if @book.save
-      flash[:notice] = "投稿に成功しました。"
+      flash[:notice] = "Book was successfully created."
       redirect_to book_path(@book.id)
     else
-      flash.now[:alert] = "投稿に失敗しました。"
+      flash.now[:alert] = "failed to create Book."
       @books = Book.all
       render :index,status: :unprocessable_entity
     end
@@ -33,10 +33,10 @@ class BooksController < ApplicationController
   def update
     @book = Book.find(params[:id])
     if @book.update(book_params)
-      flash[:notice] = "更新に成功しました。"
+      flash[:notice] = "Book was successfully updated."
       redirect_to book_path(@book.id)
     else
-      flash.now[:alert] = "更新に失敗しました。"
+      flash.now[:alert] = "failed to edit Book."
       render :edit
     end
   end
