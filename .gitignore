@@ -1,4 +1,10 @@
 /caravan
 **DS_Store
+.DS_Store
+
+**/tmp
+**/cache
+**/log
+**/logs
+**/storage/*
 **/.DS_Store
-sample_app/**
