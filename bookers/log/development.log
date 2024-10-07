@@ -1439,3 +1439,248 @@ Book object exists: true
 Completed 422 Unprocessable Content in 111ms (Views: 95.8ms | ActiveRecord: 0.4ms | Allocations: 2818031)
 
 
+Started GET "/" for ::1 at 2024-10-06 21:21:24 +0900
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 2.9ms | Allocations: 67827)
+  Rendered layout layouts/application.html.erb (Duration: 148.7ms | Allocations: 4388421)
+Completed 200 OK in 159ms (Views: 155.4ms | ActiveRecord: 0.0ms | Allocations: 4643258)
+
+
+Started GET "/books" for ::1 at 2024-10-06 21:21:26 +0900
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (7.6ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:12
+Book object exists: false
+  Rendered books/index.html.erb within layouts/application (Duration: 41.6ms | Allocations: 1203341)
+  Rendered layout layouts/application.html.erb (Duration: 59.4ms | Allocations: 1715565)
+Completed 200 OK in 123ms (Views: 54.5ms | ActiveRecord: 9.7ms | Allocations: 3407175)
+
+
+Started GET "/" for ::1 at 2024-10-06 21:23:36 +0900
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 2.2ms | Allocations: 37643)
+  Rendered layout layouts/application.html.erb (Duration: 24.3ms | Allocations: 603884)
+Completed 200 OK in 33ms (Views: 29.3ms | ActiveRecord: 0.0ms | Allocations: 776050)
+
+
+Started GET "/books" for ::1 at 2024-10-06 21:23:37 +0900
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:12
+Book object exists: false
+  Rendered books/index.html.erb within layouts/application (Duration: 32.1ms | Allocations: 876717)
+  Rendered layout layouts/application.html.erb (Duration: 48.9ms | Allocations: 1388823)
+Completed 200 OK in 57ms (Views: 52.5ms | ActiveRecord: 0.5ms | Allocations: 1583352)
+
+
+Started GET "/books" for ::1 at 2024-10-06 21:27:26 +0900
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:12
+Book object exists: false
+  Rendered books/index.html.erb within layouts/application (Duration: 37.0ms | Allocations: 1026683)
+Started POST "/books" for ::1 at 2024-10-06 21:27:28 +0900
+  Rendered layout layouts/application.html.erb (Duration: 3117.2ms | Allocations: 97635448)
+Completed 500 Internal Server Error in 3200ms (ActiveRecord: 12.2ms | Allocations: 99911503)
+
+
+  
+ActionView::Template::Error (undefined method `javascript_pack_tag' for #<ActionView::Base:0x000000000217a0>
+
+    '.freeze; @output_buffer.append=( javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' ); @output_buffer.safe_append='
+                                      ^^^^^^^^^^^^^^^^^^^
+Did you mean?  javascript_path
+               javascript_tag):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:      <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+Processing by BooksController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"", "body"=>""}, "commit"=>"Create Book"}
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:12
+Book object exists: true
+  Rendered books/index.html.erb within layouts/application (Duration: 70.6ms | Allocations: 2030030)
+  Rendered layout layouts/application.html.erb (Duration: 3318.6ms | Allocations: 98168082)
+Completed 500 Internal Server Error in 3408ms (ActiveRecord: 12.8ms | Allocations: 100681094)
+
+
+  
+ActionView::Template::Error (undefined method `javascript_pack_tag' for #<ActionView::Base:0x00000000025530>
+
+    '.freeze; @output_buffer.append=( javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' ); @output_buffer.safe_append='
+                                      ^^^^^^^^^^^^^^^^^^^
+Did you mean?  javascript_path
+               javascript_tag):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:      <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+app/controllers/books_controller.rb:16:in `create'
+Started GET "/" for ::1 at 2024-10-06 21:32:01 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 0.4ms | Allocations: 394)
+  Rendered layout layouts/application.html.erb (Duration: 29.1ms | Allocations: 26473)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.0ms | Allocations: 30748)
+
+
+  
+ActionView::Template::Error (undefined method `javascript_pack_tag' for #<ActionView::Base:0x0000000000b130>
+
+    '.freeze; @output_buffer.append=( javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' ); @output_buffer.safe_append='
+                                      ^^^^^^^^^^^^^^^^^^^
+Did you mean?  javascript_path
+               javascript_tag):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:      <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+Started GET "/" for 127.0.0.1 at 2024-10-07 14:08:51 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 0.6ms | Allocations: 394)
+  Rendered layout layouts/application.html.erb (Duration: 32.5ms | Allocations: 35814)
+Completed 200 OK in 39ms (Views: 35.4ms | ActiveRecord: 0.0ms | Allocations: 40137)
+
+
+Started GET "/books" for 127.0.0.1 at 2024-10-07 14:08:53 +0900
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:12
+Book object exists: false
+  Rendered books/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 3858)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 5169)
+Completed 200 OK in 47ms (Views: 4.8ms | ActiveRecord: 1.4ms | Allocations: 17729)
+
+
+Started GET "/books" for ::1 at 2024-10-07 14:10:17 +0900
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:12
+Book object exists: false
+  Rendered books/index.html.erb within layouts/application (Duration: 5.9ms | Allocations: 1759)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 2923)
+Completed 200 OK in 12ms (Views: 9.5ms | ActiveRecord: 0.2ms | Allocations: 3250)
+
+
+Started GET "/books/1" for ::1 at 2024-10-07 14:10:49 +0900
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:26:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 279)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 1807)
+Completed 200 OK in 16ms (Views: 2.5ms | ActiveRecord: 0.2ms | Allocations: 6261)
+
+
+Started GET "/books/1/edit" for ::1 at 2024-10-07 14:10:51 +0900
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:30:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1203)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 2361)
+Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 0.1ms | Allocations: 3207)
+
+
+Started GET "/books/1/edit" for ::1 at 2024-10-07 14:12:10 +0900
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:30:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 5.1ms | Allocations: 6769)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 6866)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 1.2ms | Allocations: 13038)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `book' for #<ActionView::Base:0x0000000000ef38>
+
+ @output_buffer.safe_append='<td>'.freeze; @output_buffer.append=( link_to 'Show', book_path(book) ); @output_buffer.safe_append='</td>
+                                                                                             ^^^^
+Did you mean?  @book):
+    26:     <%= form.submit %>
+    27:   </div>
+    28: <% end %>
+    29: <td><%= link_to 'Show', book_path(book) %></td>
+    30: <%= link_to 'Back', books_path %>
+  
+app/views/books/edit.html.erb:29
+Started GET "/books/1/edit" for ::1 at 2024-10-07 14:12:24 +0900
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:30:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/edit.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1497)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 16794)
+Completed 200 OK in 18ms (Views: 9.5ms | ActiveRecord: 1.5ms | Allocations: 23031)
+
+
+Started GET "/books/1" for ::1 at 2024-10-07 14:12:25 +0900
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:26:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 205)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 1549)
+Completed 200 OK in 7ms (Views: 4.1ms | ActiveRecord: 0.1ms | Allocations: 2461)
+
+
+Started GET "/books" for ::1 at 2024-10-07 14:12:27 +0900
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:12
+Book object exists: false
+  Rendered books/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 2215)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 3377)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.1ms | Allocations: 3727)
+
+
