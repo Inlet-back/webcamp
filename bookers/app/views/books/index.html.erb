@@ -21,7 +21,7 @@
  #rails7からはturbo_methodを使う 
 <%
 =end%>
-            <td><%= link_to 'Destroy', book_path(book), method: :delete, data: { turbo_method: :delete ,turbo_confirm: 'Are you sure?' } %></td>
+            <td><%= link_to 'Destroy', book_path(book), method: :delete, data: { confirm: 'Are you sure?' } %></td>
             </tr>
         <% end %>
         </tbody>
